@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test:unit": "jest",
+    "test:unit": "vitest",
     "preview": "vite preview",
     "build": "vue-tsc && vite build"
   },
