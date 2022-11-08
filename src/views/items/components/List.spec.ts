@@ -1,5 +1,5 @@
 import List from "./List.vue";
-import Item from "@components/Item.vue";
+import Item from "./Item.vue";
 import { INews } from "@interfaces/news";
 import { mount, shallowMount, VueWrapper } from "@vue/test-utils";
 

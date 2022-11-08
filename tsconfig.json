@@ -18,6 +18,7 @@
     "paths": {
       "@api/*": ["src/api/*"],
       "@json/*": ["src/json/*"],
+      "@views/*": ["src/views/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@components/*": ["src/components/*"],
     },
