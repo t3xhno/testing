@@ -1,31 +1,26 @@
 <script lang="ts" setup>
-import { ref } from "vue";
-import { fetchNews } from "@api/newsApi";
+import Item from "./Item.vue";
 import type { INews } from "@interfaces/news";
 
-const items = ref<INews[]>(await fetchNews());
+defineProps<{
+  items: INews[];
+}>();
 </script>
 
 <template>
   <div
-    v-if="items"
     class="data" 
   >
     <div class="items-container">
-      <div
+      <template
         v-for="item in items"
         :key="item.id"
-        class="item"
       >
-        {{ item.name }}: {{ item.age }}
-      </div>
+        <Item
+          :item="item"
+        />
+      </template>
     </div>
-  </div>
-  <div
-    v-else
-    class="no-data"
-  >
-    Loading...
   </div>
 </template>
 
