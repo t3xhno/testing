@@ -36,13 +36,21 @@ describe("List.vue", () => {
     expect(wrapper.text()).toContain("Item 1");
   });
 
-  test("Renders the correct number of items", () => {
+  test("Renders the correct item props", () => {
     const wrapper = shallowMount(List, {
       propsData: {
         items: testItems,
       },
     });
 
-    expect(wrapper.findAllComponents(Item)).toHaveLength(testItems.length);
+    const items = wrapper.findAllComponents(Item);
+    console.log(items.length);
+
+    expect(items).toHaveLength(testItems.length);
+
+    items.forEach((item, index) => {
+      expect(item.props().item).toStrictEqual(testItems[index]);
+    });
+
   });
 });
