@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
@@ -17,4 +18,12 @@ export default defineConfig({
     include: ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
   },
   plugins: [vue()],
+  resolve: {
+    alias: {
+      "@api": path.resolve(__dirname, "src/api"),
+      "@json": path.resolve(__dirname, "src/json"),
+      "@interfaces": path.resolve(__dirname, "src/interfaces"),
+      "@components": path.resolve(__dirname, "src/components"),
+    },
+  },
 })

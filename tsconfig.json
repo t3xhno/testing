@@ -14,6 +14,13 @@
     "noEmit": true,
     // To get TypeScript working with the global APIs
     "types": ["vitest/globals"],
+    "baseUrl": "./",
+    "paths": {
+      "@api/*": ["src/api/*"],
+      "@json/*": ["src/json/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@components/*": ["src/components/*"],
+    },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

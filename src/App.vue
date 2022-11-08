@@ -1,43 +1,9 @@
 <script setup lang="ts">
-const items = [
-  {
-    id: 1,
-    age: 12,
-    name: "Item 1",
-  },
-  {
-    id: 2,
-    age: 12,
-    name: "Item 2",
-  },
-  {
-    id: 3,
-    age: 12,
-    name: "Item 3",
-  },
-  {
-    id: 4,
-    age: 12,
-    name: "Item 4",
-  },
-  {
-    id: 5,
-    age: 12,
-    name: "Item 5",
-  },
-  {
-    id: 6,
-    age: 12,
-    name: "Item 6",
-  },
-  {
-    id: 7,
-    age: 12,
-    name: "Item 7",
-  },
-];
+import List from "@components/List.vue";
 </script>
 
 <template>
-  LOL
+  <Suspense>
+    <List />
+  </Suspense>
 </template>
