@@ -23,6 +23,7 @@ export default defineConfig({
       "@api": path.resolve(__dirname, "src/api"),
       "@json": path.resolve(__dirname, "src/json"),
       "@views": path.resolve(__dirname, "src/views"),
+      "@helpers": path.resolve(__dirname, "src/helpers"),
       "@interfaces": path.resolve(__dirname, "src/interfaces"),
       "@components": path.resolve(__dirname, "src/components"),
     },

@@ -13,12 +13,13 @@
     "skipLibCheck": true,
     "noEmit": true,
     // To get TypeScript working with the global APIs
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "vite/client"],
     "baseUrl": "./",
     "paths": {
       "@api/*": ["src/api/*"],
       "@json/*": ["src/json/*"],
       "@views/*": ["src/views/*"],
+      "@helpers/*": ["src/helpers/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@components/*": ["src/components/*"],
     },

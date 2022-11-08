@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
-import itemRoutes from "@views/items/itemRoutes";
+import loadedRoutes from "@helpers/loadRoutes";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes = [
-  ...itemRoutes,
+  ...loadedRoutes as RouteRecordRaw[],
 ];
 
 const router = createRouter({
