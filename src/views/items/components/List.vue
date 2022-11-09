@@ -1,20 +1,13 @@
 <script lang="ts" setup>
-import { ref } from "vue";
 import Item from "./Item.vue";
 import type { INews } from "@interfaces/news";
-import ProgressBar from "@components/utilities/ProgressBar.vue";
 
 defineProps<{
   items: INews[];
 }>();
-
-const progress = ref<InstanceType<typeof ProgressBar> | null>(null);
 </script>
 
 <template>
-  <ProgressBar ref="progress"/>
-  <button @click="progress?.start()">START</button>
-  <button @click="progress?.finish()">FINISH</button>
   <div
     class="data" 
   >
