@@ -13,7 +13,7 @@ export default defineConfig({
     // Enable watch mode
     watch: true,
     // Custom reporter
-    reporters: "verbose",
+    reporters: "default",
     // Test file names to look for
     include: ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
   },

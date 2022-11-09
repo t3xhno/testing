@@ -14,14 +14,13 @@ describe("ProgressBar.vue", () => {
     expect((wrapper.element as HTMLElement).style.width).toBe("0%");
   });
 
-  test("Displays the bar when start is called", () => {
+  test("Displays the bar when start is called", async () => {
     const wrapper = shallowMount(ProgressBar);
 
     expect(wrapper.classes()).toContain("hidden");
     
-    vi.useFakeTimers
-    wrapper.vm.start();
+    await wrapper.vm.start();
     
-    expect(wrapper.classes()).toContain("hidden");
+    expect(wrapper.classes()).not.toContain("hidden");
   });
 });
