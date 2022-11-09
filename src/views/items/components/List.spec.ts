@@ -44,7 +44,6 @@ describe("List.vue", () => {
     });
 
     const items = wrapper.findAllComponents(Item);
-    console.log(items.length);
 
     expect(items).toHaveLength(testItems.length);
 
