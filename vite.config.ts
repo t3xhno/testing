@@ -20,10 +20,12 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
+      "@app": path.resolve(__dirname, "src"),
       "@api": path.resolve(__dirname, "src/api"),
       "@json": path.resolve(__dirname, "src/json"),
       "@views": path.resolve(__dirname, "src/views"),
       "@helpers": path.resolve(__dirname, "src/helpers"),
+      "@plugins": path.resolve(__dirname, "src/plugins"),
       "@interfaces": path.resolve(__dirname, "src/interfaces"),
       "@components": path.resolve(__dirname, "src/components"),
     },

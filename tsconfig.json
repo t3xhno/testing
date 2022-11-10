@@ -16,9 +16,11 @@
     "types": ["vitest/globals", "vite/client"],
     "baseUrl": "./",
     "paths": {
+      "@app/*": ["src/*"],
       "@api/*": ["src/api/*"],
       "@json/*": ["src/json/*"],
       "@views/*": ["src/views/*"],
+      "@plugins/*": ["src/plugins/*"],
       "@helpers/*": ["src/helpers/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@components/*": ["src/components/*"],

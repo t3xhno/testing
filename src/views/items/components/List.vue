@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Item from "./Item.vue";
 import type { INews } from "@interfaces/news";
+import { start, finish } from "@plugins/ProgressBar";
 
 defineProps<{
   items: INews[];
@@ -8,6 +9,8 @@ defineProps<{
 </script>
 
 <template>
+  <button @click="start">START</button>
+  <button @click="finish">FINISH</button>
   <div
     class="data" 
   >
