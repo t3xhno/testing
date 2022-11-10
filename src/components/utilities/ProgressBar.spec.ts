@@ -74,4 +74,17 @@ describe("ProgressBar.vue", () => {
     expect((wrapper.element as HTMLElement).style.width).toBe("100%");
     expect(wrapper.classes()).toContain("hidden");
   });
+
+  test("Mocks start", () => {
+    const wrapper = shallowMount(ProgressBar, {
+      global: {
+        mocks: {
+          start: vi.fn(),
+        },
+      },
+    });
+
+    // expect(wrapper.vm.start()).toBe("hehe xd");
+    // expect(wrapper.vm.start()).not.toHaveBeenCalled();
+  });
 });
